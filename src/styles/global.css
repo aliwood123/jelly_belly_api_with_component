@@ -3,6 +3,12 @@
 body > * {
     box-sizing: border-box;
   }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
   
   .grid {
     list-style: none;
@@ -15,7 +21,7 @@ body > * {
   }
   
   .grid li {
-    border: 0.5rem solid green;
+    border: 0.5rem solid black;
     display: flex;
     justify-content: center;
     align-items: center;

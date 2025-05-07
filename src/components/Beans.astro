@@ -1,0 +1,24 @@
+---
+// data source
+// replace temporary JSON placeholder API
+const source = 'https://assets.codepen.io/16425/jelly-belly-beans.json';
+// fetch the data
+const res = await fetch(source); 
+// store retreived data
+const jellyBeans = await res.json();
+---
+
+<ul class="grid">
+		  
+    <!-- Your API Data -->
+    {
+        jellyBeans.map( bean =>
+        <li style={`background: ${bean.backgroundColor}`} class="card-item">
+        <h3>{ bean.flavorName }</h3>
+        <img src={bean.imageUrl} alt={bean.flavorName} />
+        <p class="description">{bean.description}</p>
+        </li> 
+        )
+    }
+
+</ul>

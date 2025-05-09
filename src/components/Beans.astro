@@ -13,7 +13,7 @@ const jellyBeans = await res.json();
     <!-- Your API Data -->
     {
         jellyBeans.map( bean =>
-        <li style={`background: ${bean.backgroundColor}`} class="card-item">
+        <li class="card-item">
         <h3>{ bean.flavorName }</h3>
         <img src={bean.imageUrl} alt={bean.flavorName} />
         <p class="description">{bean.description}</p>

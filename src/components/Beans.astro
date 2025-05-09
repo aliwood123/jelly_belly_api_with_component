@@ -14,9 +14,14 @@ const jellyBeans = await res.json();
     {
         jellyBeans.map( bean =>
         <li class="card-item">
-        <h3>{ bean.flavorName }</h3>
-        <img src={bean.imageUrl} alt={bean.flavorName} />
-        <p class="description">{bean.description}</p>
+            
+                <h3 class="bean-name">{ bean.flavorName }</h3>
+                <div class="image-container">
+                    <img src={bean.imageUrl} alt={bean.flavorName} />
+                </div>
+                <div class="card-overlay">
+                    <p class="bean-description">{bean.description}</p>
+                </div>
         </li> 
         )
     }
